@@ -17,17 +17,16 @@
         }
         
         .header {
-            background-color: white;
-            padding: 20px 0;
+            background-color: #fff;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            flex-wrap: wrap;
         }
         
         .header img {
             width: 30px;
-            margin: 10px 15px;
         }
         
         .header nav {
@@ -42,7 +41,7 @@
             font-weight: 400;
         }
         
-        .header nav a:hover {
+        nav a:hover {
             color: #00c2a8;
         }
         
@@ -70,7 +69,7 @@
         }
         
         .contact-info p {
-            line-height: 1.6;
+            font-size: 18px;
             margin-bottom: 10px;
         }
         
@@ -124,48 +123,31 @@
         }
         
         .footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 20px;
-            text-align: left;
-        }
-        
-        .footer .footer-container {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: #1a1a1a;
         }
         
-        .footer .footer-container div {
+        .footer div {
+            flex: 1;
+            min-width: 200px;
             margin-bottom: 20px;
         }
         
-        .footer .footer-container .footer-left {
-            width: 30%;
-            display: flex;
-        }
-        
-        .footer .footer-container .footer-left {
-            width: 30%;
-            margin-right: auto;
-        }
-        
-        .footer .footer-container .footer-right {
-            width: 60%;
-            display: flex;
-            justify-content: space-between;
-            text-align: right;
-        }
-        
-        .footer .footer-container .footer-right div {
-            width: 23%;
-        }
-        
-        .footer a {
-            color: white;
-            text-decoration: none;
-            display: block;
+        .footer div p {
             margin: 5px 0;
+            color: #fff;
+        }
+        
+        .footer div p:first-child {
+            font-weight: bold;
+        }
+        
+        .footer div p a {
+            color: #ffffff;
+            text-decoration: none;
         }
         
         @media (max-width: 768px) {
@@ -183,13 +165,13 @@
             .contact-info div {
                 width: 100%;
             }
-            .footer .footer-left,
-            .footer .footer-right {
-                width: 100%;
-                text-align: center;
-            }
-            .footer .footer-right {
+            .footer {
                 flex-direction: column;
+                padding: 20px;
+            }
+            .footer div {
+                margin-left: 0;
+                margin-bottom: 20px;
             }
         }
         
@@ -212,43 +194,22 @@
             .contact-form textarea {
                 padding: 10px;
             }
-            .footer {
-                text-align: center;
-            }
-            .footer .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .footer .footer-left,
-            .footer .footer-right {
-                width: 100%;
-                text-align: center;
-            }
-            .footer .footer-right div {
-                width: 100%;
-                margin-bottom: 10px;
-            }
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
+    <header class="header">
         <a href="index.html">
             <img alt="Logo" src="./imgs/ss/icons8-diamond-50.png">
         </a>
         <nav>
-            <a href="home.html">
-     HOME
-    </a>
-            <a href="About.html">
-     ABOUT
-    </a>
-            <a href="contact.html">
-     CONTACT
-    </a>
+            <a href="home.html">HOME</a>
+            <a class="active" href="About.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
-    </div>
+    </header>
+
     <div class="container">
         <div class="contact-info">
             <div>
@@ -293,72 +254,36 @@
             <img alt="Map showing location in New York" height="400" src="https://storage.googleapis.com/a1aa/image/NUQR6s9bWOZoA5prS3dEt6KmAkfZfjGPtSvf7TfOTw3zZPPOB.jpg" width="1200" />
         </div>
     </div>
-    <div class="footer ">
-        <div class="footer-container ">
-            <div class="footer-left ">
-                <p style="font-weight: bold ;">
-                    Piroll Design, Inc. © 2017 Piroll. All rights reserved. Designed by robirurk.
-                </p>
-                <div class="info">
-                    <p>
-                        hello@pirolltheme.com
-                    </p>
-                    <p>
-                        +44 987 065 908
-
-                </div>
-
-            </div>
-            <div class="footer-right ">
-                <div class="right-first">
-                    <a href="# ">
-       Projects
-      </a>
-                    <a href="# ">
-       About
-      </a>
-                    <a href="About.html">
-       Services
-      </a>
-                    </a>
-                    <a href="# ">
-Legals
-</a>
-                </div>
-                <div>
-                    <a href="# ">
-       News
-      </a>
-                    <a href="# ">
-       Events
-      </a>
-                    <a href="contact.html">
-       Contact
-      </a>
-                    <a href="# ">
-        Career
-       </a>
-
-                </div>
-
-
-
-                <div>
-                    <a href="# ">
-       Facebook
-      </a>
-                    <a href="# ">
-       Twitter
-      </a>
-                    <a href="# ">
-       Instagram
-      </a>
-                    <a href="# ">
-       Dribbble
-      </a>
-                </div>
-            </div>
+    <div class="footer">
+        <div>
+            <p>Piroll Design, Inc.</p>
+            <p>© 2017 Piroll. All rights reserved.</p>
+            <p>Designed by robirurk.</p>
         </div>
+        <div>
+            <p><a href="mailto:hello@pirolltheme.com">hello@pirolltheme.com</a></p>
+            <p>+44 987 065 908</p>
+        </div>
+        <div>
+            <p>Projects</p>
+            <p>About</p>
+            <p>Services</p>
+            <p>Career</p>
+        </div>
+        <div>
+            <p>News</p>
+            <p>Events</p>
+            <p>Contact</p>
+            <p>Legals</p>
+        </div>
+        <div>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+            <p>Dribbble</p>
+        </div>
+    </div>
+
 </body>
 
 </html>

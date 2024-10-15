@@ -14,34 +14,36 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             color: #333;
         }
         
         .header {
+            background-color: #fff;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
-            background-color: #fff;
+            flex-wrap: wrap;
         }
         
         .header img {
             width: 30px;
         }
         
-        .nav {
+        .header nav {
             display: flex;
-            gap: 20px;
+            flex-wrap: wrap;
         }
         
-        .nav a {
+        .header nav a {
+            margin: 0 15px;
             text-decoration: none;
-            color: #333;
+            color: #000;
             font-weight: 400;
         }
         
-        .header nav a:hover {
+        nav a:hover {
             color: #00c2a8;
         }
         
@@ -65,7 +67,13 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 0px;
-            padding: 5px;
+        }
+        
+        .portfolio-item-home {
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
         }
         
         .portfolio img {
@@ -73,68 +81,81 @@
             height: auto;
         }
         
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 20px;
-            text-align: left;
-        }
-        
-        .footer .footer-container {
+        .portfolio-item-home::before {
+            content: '\f06e';
+            /* Eye icon from Font Awesome */
+            font-family: 'Font Awesome 5 Free', emoji;
+            font-size: 24px;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 255, 208, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
         }
         
-        .footer .footer-container div {
+        .portfolio-item-home:hover::before {
+            opacity: 1;
+        }
+        
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: #1a1a1a;
+        }
+        
+        .footer div {
+            flex: 1;
+            min-width: 200px;
             margin-bottom: 20px;
         }
         
-        .footer .footer-container .footer-left {
-            width: 30%;
-            display: flex;
-        }
-        
-        .footer .footer-container .footer-left {
-            width: 30%;
-            margin-right: auto;
-        }
-        
-        .footer .footer-container .footer-right {
-            width: 60%;
-            display: flex;
-            justify-content: space-between;
-            text-align: right;
-        }
-        
-        .footer .footer-container .footer-right div {
-            width: 23%;
-        }
-        
-        .footer a {
-            color: white;
-            text-decoration: none;
-            display: block;
+        .footer div p {
             margin: 5px 0;
+            color: #fff;
         }
+        
+        .footer div p:first-child {
+            font-weight: bold;
+        }
+        
+        .footer div p a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .footer div {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {}
     </style>
 </head>
 
 <body>
     <header class="header">
         <a href="index.html">
-            <img alt="Logo" src="./imgs/ss/icons8-diamond-50.png" />
+            <img alt="Logo" src="./imgs/ss/icons8-diamond-50.png">
         </a>
-        <nav class="nav">
-            <a class="active" href="#">
-     Home
-    </a>
-            <a href="About.html">
-     About
-    </a>
-            <a href="contact.html">
-     Contact
-    </a>
+        <nav>
+            <a href="home.html">HOME</a>
+            <a class="active" href="About.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
     </header>
     <main class="main">
@@ -145,86 +166,74 @@
             I am a Graphic &amp; Web Designer based in New York, specializing in User Interface Design and Development.
         </p>
     </main>
-    <section class="portfolio">
-        <img alt="Business card design on a table" height="300" src="./imgs/new/photo_2024-10-10_22-20-38.jpg" width="300" />
-        <img alt="Mobile phone displaying a design" height="300" src="./imgs/new/photo_2024-10-10_22-21-25.jpg" width="300" />
-        <img alt="Shopping bag with a logo" height="300" src="./imgs/new/photo_2024-10-10_22-21-33.jpg" width="300" />
-        <img alt="Black book with a logo on a rock" height="300" src="./imgs/new/photo_2024-10-12_11-04-57.jpg" width="300" />
-        <img alt="Glass bottle with a label" height="300" src="./imgs/new/photo_2024-10-10_22-21-38.jpg" width="300" />
-        <img alt="Turquoise shopping bag with an eye logo" height="300" src="./imgs/new/photo_2024-10-10_22-21-43.jpg" width="300" />
-        <img alt="Honey jar with a label" height="300" src="./imgs/new/photo_2024-10-10_22-21-48.jpg" width="300" />
-        <img alt="White bottle with a pump" height="300" src="./imgs/new/photo_2024-10-10_22-21-51.jpg" width="300" />
-        <img alt="Label tag with a string" height="300" src="./imgs/new/photo_2024-10-12_11-04-57.jpg" width="300" />
-        <img alt="White wine bottle with a label" height="300" src="./imgs/new/photo_2024-10-12_11-05-12.jpg" width="300" />
-        <img alt="Box with a design and a leaf" height="300" src="./imgs/new/photo_2024-10-10_22-21-38.jpg" width="300" />
-        <img alt="Business cards with a design" height="300" src="./imgs/new/photo_2024-10-10_22-21-38.jpg" width="300" />
-    </section>
-    <div class="footer ">
-        <div class="footer-container ">
-            <div class="footer-left ">
-                <p style="font-weight: bold ;">
-                    Piroll Design, Inc. © 2017 Piroll. All rights reserved. Designed by robirurk.
-                </p>
-                <div class="info">
-                    <p>
-                        hello@pirolltheme.com
-                    </p>
-                    <p>
-                        +44 987 065 908
+    <div class="portfolio">
+        <div class="portfolio-item-home">
+            <img alt="Business card with a logo on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/FWrkToiJdD6zIFtCLGLKHXqrFSBTr7nDMaHRhemR2rD9PflTA.jpg" width="300" />
 
-                </div>
-
-            </div>
-            <div class="footer-right ">
-                <div class="right-first">
-                    <a href="# ">
-       Projects
-      </a>
-                    <a href="# ">
-       About
-      </a>
-                    <a href="About.html">
-       Services
-      </a>
-                    </a>
-                    <a href="# ">
-Legals
-</a>
-                </div>
-                <div>
-                    <a href="# ">
-       News
-      </a>
-                    <a href="# ">
-       Events
-      </a>
-                    <a href="contact.html">
-       Contact
-      </a>
-                    <a href="# ">
-        Career
-       </a>
-
-                </div>
-
-
-
-                <div>
-                    <a href="# ">
-       Facebook
-      </a>
-                    <a href="# ">
-       Twitter
-      </a>
-                    <a href="# ">
-       Instagram
-      </a>
-                    <a href="# ">
-       Dribbble
-      </a>
-                </div>
-            </div>
         </div>
-</body>
+        <div class="portfolio-item-home">
+            <img alt="Honey jar with a label on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/dZrecMGdLOwyMysGchBa4cyZQKfEwSBLU12yO3E8yvY4f8LnA.jpg" width="300" />
+        </div>
+        <div class="portfolio-item-home">
+            <img alt="Smartphone displaying an e-commerce website" height="200" src="https://storage.googleapis.com/a1aa/image/Gf55tvHCRlXpIqvA6e3jsfSyZ8h3zjnVumL6zkBeXbH9ezvcC.jpg" width="300" />
+        </div>
+        <div class="portfolio-item-home">
+            <img alt="White shopping bag with a logo on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/iVZM1e4TYxzcGaHVHLUHGr0py8i1BmjsPjsWiWuNTjX7PflTA.jpg" width="300" />
+        </div>
+        <div class="portfolio-item-home">
+            <img alt="Black brochure with a rock on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/8AA9jy843JbbBFlXf1lfF8WOfRsSzxxrkfy7B51OQPmIfzvcC.jpg" width="300" />
+        </div>
+        <div class="portfolio-item-home">
+            <img alt="Glass bottle with a cork on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/UKdSKXfK8txTP6kQXfFhXHJ9OFLUaaoXbAO9qhu49y20f8LnA.jpg" width="300" />
+        </div>
+        <div class="portfolio-item-home">
+            <img alt="White shopping bag with a logo on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/iVZM1e4TYxzcGaHVHLUHGr0py8i1BmjsPjsWiWuNTjX7PflTA.jpg" width="300" />
+        </div>
+        <div class="portfolio-item-home">
+            <img alt="White shopping bag with a logo on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/iVZM1e4TYxzcGaHVHLUHGr0py8i1BmjsPjsWiWuNTjX7PflTA.jpg" width="300" />
+        </div>
+
+        <div class="portfolio-item-home">
+            <img alt="Honey jar with a label on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/dZrecMGdLOwyMysGchBa4cyZQKfEwSBLU12yO3E8yvY4f8LnA.jpg" width="300" />
+        </div>
+        <div class="portfolio-item-home">
+            <img alt="Black brochure with a rock on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/8AA9jy843JbbBFlXf1lfF8WOfRsSzxxrkfy7B51OQPmIfzvcC.jpg" width="300" />
+        </div>
+        <div class="portfolio-item-home">
+            <img alt="White bottle with a pump dispenser on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/CiFJYfEI510dKqgcxN9ffcR1n9dzrAJaAf9tBkYfbYqNenfyJA.jpg" width="300" />
+        </div>
+        <div class="portfolio-item-home">
+            <img alt="White shopping bag with a logo on a light background" height="200" src="https://storage.googleapis.com/a1aa/image/iVZM1e4TYxzcGaHVHLUHGr0py8i1BmjsPjsWiWuNTjX7PflTA.jpg" width="300" />
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <p>Piroll Design, Inc.</p>
+            <p>© 2017 Piroll. All rights reserved.</p>
+            <p>Designed by robirurk.</p>
+        </div>
+        <div>
+            <p><a href="mailto:hello@pirolltheme.com">hello@pirolltheme.com</a></p>
+            <p>+44 987 065 908</p>
+        </div>
+        <div>
+            <p>Projects</p>
+            <p>About</p>
+            <p>Services</p>
+            <p>Career</p>
+        </div>
+        <div>
+            <p>News</p>
+            <p>Events</p>
+            <p>Contact</p>
+            <p>Legals</p>
+        </div>
+        <div>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+            <p>Dribbble</p>
+        </div>
+    </div>
 
 </html>
