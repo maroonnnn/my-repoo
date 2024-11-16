@@ -13,7 +13,6 @@ body {
 }
 
 .header {
-    
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -23,6 +22,7 @@ body {
 
 .header img {
     width: 30px;
+    padding-left: 55%;
 }
 
 .header nav {
@@ -42,8 +42,13 @@ nav a:hover {
 }
 
 .hero {
-    text-align: left;
     padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    /* Change to column to stack elements */
+    align-items: flex-end;
+    /* Align items to the right */
+    justify-content: flex-end;
 }
 
 .hero h1 {
@@ -124,7 +129,14 @@ nav a:hover {
     color: #fff;
     padding: 50px 20px;
     text-align: center;
-    gap: 6px;
+    gap: 20px;
+    /* Add this line to create space between items */
+    display: flex;
+    /* Ensure display is set to flex */
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    justify-content: center;
+    /* Center the items horizontally */
 }
 
 .stats .stat {
@@ -256,6 +268,14 @@ nav a:hover {
 .clients {
     text-align: center;
     padding: 50px 20px;
+    display: flex;
+    /* Add this line to enable flexbox */
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    justify-content: center;
+    /* Center the items */
+    gap: 25px;
+    /* Add this line to set the space between images */
 }
 
 .clients img {
