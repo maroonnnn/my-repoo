@@ -45,9 +45,9 @@ nav a:hover {
     padding: 100px 20px;
     display: flex;
     flex-direction: column;
-    /* Change to column to stack elements */
+   
     align-items: flex-end;
-    /* Align items to the right */
+   
     justify-content: flex-end;
 }
 
@@ -130,13 +130,13 @@ nav a:hover {
     padding: 50px 20px;
     text-align: center;
     gap: 20px;
-    /* Add this line to create space between items */
+ 
     display: flex;
-    /* Ensure display is set to flex */
+    
     flex-wrap: wrap;
-    /* Allow items to wrap */
+   
     justify-content: center;
-    /* Center the items horizontally */
+   
 }
 
 .stats .stat {
@@ -269,13 +269,13 @@ nav a:hover {
     text-align: center;
     padding: 50px 20px;
     display: flex;
-    /* Add this line to enable flexbox */
+    
     flex-wrap: wrap;
-    /* Allow items to wrap */
+    
     justify-content: center;
-    /* Center the items */
+   
     gap: 25px;
-    /* Add this line to set the space between images */
+   
 }
 
 .clients img {
